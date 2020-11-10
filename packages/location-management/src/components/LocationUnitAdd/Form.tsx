@@ -81,7 +81,6 @@ export const Form: React.FC<Props> = (props: Props) => {
           .then((response: LocationTag[]) => {
             locationstagfetched = true;
             setLocationtag(response);
-            console.log('LocationTag : ', response);
             if (!props.id || detailfetched) setIsLoading(false);
           })
           .catch((e) => console.log(e));
@@ -109,7 +108,6 @@ export const Form: React.FC<Props> = (props: Props) => {
               geometry: JSON.stringify(response.geometry),
               type: response.type,
             });
-            console.log('LocationUnit : ', response);
             if (locationstagfetched) setIsLoading(false);
           })
           .catch((e) => console.log(e));
@@ -158,7 +156,6 @@ export const Form: React.FC<Props> = (props: Props) => {
       });
     }
     removeEmptykeys(payload);
-    console.log('payload : ', payload);
 
     if (props.id) {
       serve
