@@ -36,6 +36,7 @@
   "license": "Apache-2.0",
   "private": false,
   "dependencies": {
+    "tree-model": "^1.0.7",
     "uuidv4": "^6.2.5",
     "formik-antd": "^2.0.1",
     "@opensrp/reducer-factory": "^0.0.10",
