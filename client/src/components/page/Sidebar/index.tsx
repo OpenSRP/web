@@ -16,11 +16,11 @@ import {
   TEAM_ASSIGNMENT,
   URL_ADMIN,
   URL_HOME,
+  URL_LOCATION_UNIT_GROUP,
   URL_TEAMS,
-  URL_LOCATION_TAG,
+  URL_DOWNLOAD_CLIENT_DATA,
   URL_LOCATION_UNIT,
   USER_MANAGEMENT,
-  LOCATIONS,
   USERS,
   ADMIN,
   URL_TEAM_ASSIGNMENT,
@@ -30,6 +30,8 @@ import {
   ENABLE_PLANS,
   ENABLE_PRODUCT_CATALOGUE,
   ENABLE_TEAMS_ASSIGNMENT_MODULE,
+  ENABLE_LOCATIONS,
+  ENABLE_CARD_SUPPORT,
 } from '../../../configs/env';
 import { PLANS_LIST_VIEW_URL } from '@opensrp/plans';
 
@@ -94,18 +96,29 @@ export const SidebarComponent: React.FC<SidebarProps> = (props: SidebarProps) =>
               </Link>
             </Menu.Item>
           )}
-          <Menu.SubMenu key="admin-locations" title={LOCATIONS}>
-            <Menu.Item key="locations-unit">
-              <Link to={URL_LOCATION_UNIT} className="admin-link">
-                {LOCATIONS_UNIT}
-              </Link>
-            </Menu.Item>
-            <Menu.Item key="locations-unit-group">
-              <Link to={URL_LOCATION_TAG} className="admin-link">
-                {LOCATIONS_UNIT_GROUP}
-              </Link>
-            </Menu.Item>
-          </Menu.SubMenu>
+          {ENABLE_CARD_SUPPORT && (
+            <Menu.SubMenu key="admin-card-support" title="Card Support">
+              <Menu.Item key="admin-card-support-client-data">
+                <Link to={URL_DOWNLOAD_CLIENT_DATA} className="admin-link">
+                  Download Client Data
+                </Link>
+              </Menu.Item>
+            </Menu.SubMenu>
+          )}
+          {ENABLE_LOCATIONS && (
+            <Menu.SubMenu key="admin-locations" title="Locations">
+              <Menu.Item key="locations-unit">
+                <Link to={URL_LOCATION_UNIT} className="admin-link">
+                  {LOCATIONS_UNIT}
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="locations-unit-group">
+                <Link to={URL_LOCATION_UNIT_GROUP} className="admin-link">
+                  {LOCATIONS_UNIT_GROUP}
+                </Link>
+              </Menu.Item>
+            </Menu.SubMenu>
+          )}
         </Menu.SubMenu>
       </Menu>
     </Layout.Sider>

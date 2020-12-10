@@ -29,10 +29,11 @@ import {
   URL_LOGOUT,
   URL_LOCATION_UNIT,
   URL_HOME,
+  URL_DOWNLOAD_CLIENT_DATA,
   URL_LOCATION_UNIT_ADD,
-  URL_LOCATION_TAG,
-  URL_LOCATION_TAG_ADD,
-  URL_LOCATION_TAG_EDIT,
+  URL_LOCATION_UNIT_GROUP,
+  URL_LOCATION_UNIT_GROUP_ADD,
+  URL_LOCATION_UNIT_GROUP_EDIT,
   URL_LOCATION_UNIT_EDIT,
   URL_TEAM_EDIT,
   URL_TEAM_ADD,
@@ -64,14 +65,15 @@ import {
   URL_USER_CREDENTIALS,
 } from '@opensrp/user-management';
 import { TeamAssignmentView } from '@opensrp/team-assignment';
+import { DownloadClientData } from '@opensrp/card-support';
 import ConnectedHomeComponent from '../containers/pages/Home/Home';
 import './App.css';
 import ConnectedSidebar from '../containers/ConnectedSidebar';
 import {
   LocationUnitAddEdit,
   LocationUnitView,
-  LocationTagAddEdit,
-  LocationTagView,
+  LocationUnitGroupAddEdit,
+  LocationUnitGroupView,
 } from '@opensrp/location-management';
 import '@opensrp/product-catalogue/dist/index.css';
 import { productCatalogueProps, plansListProps, teamAssignmentProps } from './utils';
@@ -155,7 +157,7 @@ const App: React.FC = () => {
       <ConnectedSidebar />
       <div className="body-wrapper">
         <ConnectedHeader />
-        <Content>
+        <Content style={{ padding: '20px' }}>
           <Switch>
             {/* tslint:disable jsx-no-lambda */}
             {/* Home Page view */}
@@ -251,6 +253,13 @@ const App: React.FC = () => {
             />
             <PrivateComponent
               redirectPath={APP_CALLBACK_URL}
+              disableLoginProtection={DISABLE_LOGIN_PROTECTION}
+              exact
+              path={URL_DOWNLOAD_CLIENT_DATA}
+              component={DownloadClientData}
+            />
+            <PrivateComponent
+              redirectPath={APP_CALLBACK_URL}
               disableLoginProtection={false}
               exact
               path={URL_LOCATION_UNIT}
@@ -274,22 +283,22 @@ const App: React.FC = () => {
               redirectPath={APP_CALLBACK_URL}
               disableLoginProtection={false}
               exact
-              path={URL_LOCATION_TAG}
-              component={LocationTagView}
+              path={URL_LOCATION_UNIT_GROUP}
+              component={LocationUnitGroupView}
             />
             <PrivateComponent
               redirectPath={APP_CALLBACK_URL}
               disableLoginProtection={false}
               exact
-              path={URL_LOCATION_TAG_ADD}
-              component={LocationTagAddEdit}
+              path={URL_LOCATION_UNIT_GROUP_ADD}
+              component={LocationUnitGroupAddEdit}
             />
             <PrivateComponent
               redirectPath={APP_CALLBACK_URL}
               disableLoginProtection={false}
               exact
-              path={URL_LOCATION_TAG_EDIT}
-              component={LocationTagAddEdit}
+              path={URL_LOCATION_UNIT_GROUP_EDIT}
+              component={LocationUnitGroupAddEdit}
             />
             <PrivateComponent
               redirectPath={APP_CALLBACK_URL}

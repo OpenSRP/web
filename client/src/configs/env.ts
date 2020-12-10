@@ -66,5 +66,10 @@ export const ENABLE_TEAMS_ASSIGNMENT_MODULE =
 /** Default plan id */
 export const DEFAULT_PLAN_ID =
   process.env.REACT_APP_DEFAULT_PLAN_ID || '27362060-0309-411a-910c-64f55ede3758';
+/** Activate card support menu */
+export const ENABLE_CARD_SUPPORT = process.env.REACT_APP_ENABLE_CARD_SUPPORT === 'true';
 /** Activate the plans menu */
 export const ENABLE_PLANS = process.env.REACT_APP_ENABLE_PLANS === 'true';
+
+/** Activate the plans menu */
+export const ENABLE_LOCATIONS = process.env.REACT_APP_ENABLE_LOCATIONS === 'true';
