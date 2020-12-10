@@ -28,7 +28,7 @@ import { sendErrorNotification } from '@opensrp/notifications';
 
 reducerRegistry.register(reducerName, reducer);
 
-const LocationUnitGroupView: React.FC = () => {
+export const LocationUnitGroupView: React.FC = () => {
   const accessToken = useSelector((state) => getAccessToken(state) as string);
   const locationsArray = useSelector((state) => getLocationUnitGroupsArray(state));
   const dispatch = useDispatch();
