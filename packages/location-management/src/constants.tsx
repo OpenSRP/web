@@ -1,4 +1,7 @@
-export const API_BASE_URL = process.env.REACT_APP_OPENSRP_API_BASE_URL;
+export const API_BASE_URL =
+  process.env.REACT_APP_OPENSRP_API_BASE_URL ||
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+  'https://opensrp-stage.smartregister.org/opensrp/rest/';
 //
 // Location Unit
 //

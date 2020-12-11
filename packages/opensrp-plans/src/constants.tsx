@@ -39,7 +39,10 @@ export const SERVICE_POINT_CHECK = 'Service Point Check';
 export const SORT_BY_EFFECTIVE_PERIOD_START_FIELD = 'date';
 
 // opensrp api strings
-export const OPENSRP_API_BASE_URL = process.env.REACT_APP_OPENSRP_API_BASE_URL;
+export const OPENSRP_API_BASE_URL =
+  process.env.REACT_APP_OPENSRP_API_BASE_URL ||
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+  'https://opensrp-stage.smartregister.org/opensrp/rest/';
 export const OPENSRP_PLANS = 'plans';
 
 // router routes
