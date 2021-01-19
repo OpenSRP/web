@@ -65,9 +65,7 @@ describe('List view Page', () => {
     );
 
     /** loading view */
-    expect(wrapper.text()).toMatchInlineSnapshot(
-      `"Loading ...Fetching locationsPlease wait, while locations are being fetched"`
-    );
+    expect(wrapper.text()).toMatchInlineSnapshot(`""`);
 
     await act(async () => {
       await new Promise((resolve) => setImmediate(resolve));
@@ -100,9 +98,7 @@ describe('List view Page', () => {
     );
 
     /** loading view */
-    expect(wrapper.text()).toMatchInlineSnapshot(
-      `"Loading ...Fetching locationsPlease wait, while locations are being fetched"`
-    );
+    expect(wrapper.text()).toMatchInlineSnapshot(`""`);
 
     await act(async () => {
       await new Promise((resolve) => setImmediate(resolve));
@@ -157,9 +153,7 @@ describe('List view Page', () => {
     );
 
     /** loading view */
-    expect(wrapper.text()).toMatchInlineSnapshot(
-      `"Loading ...Fetching locationsPlease wait, while locations are being fetched"`
-    );
+    expect(wrapper.text()).toMatchInlineSnapshot(`""`);
 
     await act(async () => {
       await new Promise((resolve) => setImmediate(resolve));
