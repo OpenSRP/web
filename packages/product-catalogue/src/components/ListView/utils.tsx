@@ -1,5 +1,5 @@
 import React from 'react';
-import { Divider, Spin, Alert } from 'antd';
+import { Divider, Spin } from 'antd';
 import { ProductCatalogue } from '../../ducks/productCatalogue';
 import { ColumnsType, ColumnType } from 'antd/lib/table/interface';
 import {
@@ -8,14 +8,7 @@ import {
   TableColumnsNamespace,
 } from '../../constants';
 import { Link } from 'react-router-dom';
-import {
-  FETCHING_PRODUCT,
-  LOADING_ELLIPSIS,
-  PRODUCT_NAME_TH,
-  ID_TH,
-  ACTIONS_TH,
-  FETCHING_PRODUCT_DESCRIPTION,
-} from '../../lang';
+import { PRODUCT_NAME_TH, ID_TH, ACTIONS_TH } from '../../lang';
 
 /** component rendered in the action column of the table */
 
@@ -62,9 +55,5 @@ export const columns: ColumnsType<ProductCatalogue> = [
 /** util component shown when there is a pending promise */
 
 export const CatalogueLoading = () => {
-  return (
-    <Spin tip={LOADING_ELLIPSIS}>
-      <Alert message={FETCHING_PRODUCT} description={FETCHING_PRODUCT_DESCRIPTION} type="info" />
-    </Spin>
-  );
+  return <Spin size="large" className="custom-spinner"></Spin>;
 };

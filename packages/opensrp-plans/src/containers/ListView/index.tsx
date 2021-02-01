@@ -8,7 +8,7 @@ import {
 } from '../../ducks/planDefinitions';
 import { connect } from 'react-redux';
 import { ColumnsType } from 'antd/lib/table/interface';
-import { PlansLoading, columns, pageTitleBuilder } from './utils';
+import { columns, pageTitleBuilder } from './utils';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Store } from 'redux';
 import reducerRegistry from '@onaio/redux-reducer-registry';
@@ -24,6 +24,7 @@ import {
 import { CommonProps, defaultCommonProps } from '../../helpers/common';
 import { PlanDefinition, PlanStatus } from '@opensrp/plan-form-core';
 import { NEW_MISSION } from '../../lang';
+import { PlanLoading } from '../../helpers/utils';
 
 /** make sure plans reducer is registered */
 reducerRegistry.register(PlansReducerName, plansReducer);
@@ -63,7 +64,7 @@ const PlansList = (props: PlansListTypes) => {
   }, []);
 
   if (loading) {
-    return <PlansLoading />;
+    return <PlanLoading />;
   }
 
   if (broken) {

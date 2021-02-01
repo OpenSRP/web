@@ -1,19 +1,9 @@
 import React from 'react';
-import { Spin, Alert } from 'antd';
 import { ColumnsType, ColumnType } from 'antd/lib/table/interface';
 import { PLANS_ASSIGNMENT_VIEW_URL, TableColumnsNamespace } from '../../constants';
 import { Link } from 'react-router-dom';
 import { PlanDefinition } from '@opensrp/plan-form-core';
-import {
-  NAME,
-  DATE,
-  ACTIONS,
-  TIP,
-  MESSAGE,
-  DESCRIPTION,
-  MISSIONS,
-  NO_STATUS_FOUND,
-} from '../../lang';
+import { NAME, DATE, ACTIONS, MISSIONS, NO_STATUS_FOUND } from '../../lang';
 
 /** component rendered in the action column of the table */
 
@@ -54,16 +44,6 @@ export const columns: ColumnsType<PlanDefinition> = [
     width: '20%',
   },
 ];
-
-/** util component shown when there is a pending promise */
-
-export const PlansLoading = () => {
-  return (
-    <Spin tip={TIP}>
-      <Alert message={MESSAGE} description={DESCRIPTION} type="info" />
-    </Spin>
-  );
-};
 
 /** Util method that determines pageTitle */
 

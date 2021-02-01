@@ -1,17 +1,14 @@
 import React from 'react';
-import { Spin, Alert } from 'antd';
+import { Spin } from 'antd';
 import { ColumnsType, ColumnType } from 'antd/lib/table/interface';
 import { INVENTORY_SERVICE_POINT_PROFILE_VIEW, TableColumnsNamespace } from '../../constants';
 import { Link } from 'react-router-dom';
 import {
-  LOADING_ELLIPSIS,
   ACTIONS_TH,
   SERVICE_POINT_TH,
   TYPE_TH,
   LOCATION_TH,
   SERVICE_POINT_ID_TH,
-  FETCHING_LOCATIONS,
-  FETCHING_LOCATIONS_DESCRIPTION,
 } from '../../lang';
 import { TreeNode } from '@opensrp/location-management';
 
@@ -78,20 +75,9 @@ export const columns: ColumnsType<TableData> = [
 
 /**
  * util component shown when there is a pending promise
- *
- * @param root0 - object argument containing below args
- * @param root0.message - message to show as title
- * @param root0.description - description of error to show
  */
-export const ServicePointsLoading = ({
-  message = FETCHING_LOCATIONS,
-  description = FETCHING_LOCATIONS_DESCRIPTION,
-}) => {
-  return (
-    <Spin tip={LOADING_ELLIPSIS}>
-      <Alert message={message} description={description} type="info" />
-    </Spin>
-  );
+export const ServicePointsLoading = () => {
+  return <Spin size="large" className="custom-spinner"></Spin>;
 };
 
 /** function to get the parent path of a location
