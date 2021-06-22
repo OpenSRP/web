@@ -2736,6 +2736,18 @@
     "@ant-design/icons" "^4.0.0"
     react "^16.14.0"
 
+"@opensrp/fhir-heatlhcareservice@file:packages/fhir-heatlhcareservice":
+  version "0.0.5"
+  dependencies:
+    "@opensrp/notifications" "^0.0.4"
+    "@opensrp/pkg-config" "^0.0.9"
+    "@opensrp/react-utils" "^0.0.10"
+    "@opensrp/reducer-factory" "^0.0.13"
+    fhirclient "2.3.11"
+    i18next "^19.8.4"
+    react-i18next "^11.8.10"
+    uuid "^8.3.1"
+
 "@opensrp/notifications@^0.0.4":
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/@opensrp/notifications/-/notifications-0.0.4.tgz#c97b991ed7f820f1b6d2b9d447ec9169772c29ab"
@@ -2771,6 +2783,19 @@
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/@opensrp/server-service/-/server-service-0.0.4.tgz#78e0301704d2b0a751402456fdf1aab36e263d71"
   integrity sha512-iI0iWjcBPA4yRhlwl6pfqL0Pr2dXFxtbAVSyi+wLkmZ8HuBgMxg95Q0iP5UOIjBvb0xSv1SE3bpJgxE9RWN4bw==
+
+"@opensrp/store@^0.0.9":
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/@opensrp/store/-/store-0.0.9.tgz#e0b5cf49665e80ae377a2db40c046889d496f50a"
+  integrity sha512-v0JlRY51v/96Yw3IrM2E332cpv0FxS0Q4IE4yvVozZkDy4Hn0QQMVLOeExEMT2OHJq0XkwFXyHGdkBj21jVAeA==
+  dependencies:
+    "@onaio/connected-reducer-registry" "^0.0.3"
+    "@onaio/gatekeeper" "^0.1.1"
+    "@onaio/redux-reducer-registry" "^0.0.9"
+    "@onaio/session-reducer" "^0.0.11"
+    "@onaio/utils" "^0.0.1"
+    connected-react-router "^6.8.0"
+    reselect "^4.0.0"
 
 "@reduxjs/toolkit@^1.5.0":
   version "1.5.0"
@@ -2862,6 +2887,11 @@
   integrity sha512-892K+kWUUi3cl+LlqEWIDrhvLgdL79tECi8JZUyq6IviKy/DNhuzCRlbHUjxK89f4ypPMMaFnFuR9Ie6DoIMsw==
   dependencies:
     type-detect "4.0.8"
+
+"@smile-cdr/fhirts@1.2.5":
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/@smile-cdr/fhirts/-/fhirts-1.2.5.tgz#e0e335b8407889d966723f212698260e7770f7c2"
+  integrity sha512-q+Q/qLswFmE3ZaGlHgO1xTibptS2gOvp3/SS8lGno3unF3Gu1+vJahan1RU/b8WL1ziUXC9Vl3fSpdsR62SqGA==
 
 "@svgr/babel-plugin-add-jsx-attribute@^4.2.0":
   version "4.2.0"
@@ -3667,6 +3697,11 @@ abbrev@1:
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
   integrity sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==
 
+abortcontroller-polyfill@^1.5.0:
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/abortcontroller-polyfill/-/abortcontroller-polyfill-1.7.3.tgz#1b5b487bd6436b5b764fd52a612509702c3144b5"
+  integrity sha512-zetDJxd89y3X99Kvo4qFx8GKlt6GsvN3UcRZHwU6iFA/0KiOmhkTVhe8oRoTBiTVPZu09x3vCra47+w8Yz1+2Q==
+
 accepts@~1.3.4, accepts@~1.3.5, accepts@~1.3.7:
   version "1.3.7"
   resolved "https://registry.yarnpkg.com/accepts/-/accepts-1.3.7.tgz#531bc726517a3b2b41f850021c6cc15eaab507cd"
@@ -3722,11 +3757,6 @@ add-dom-event-listener@^1.1.0:
   integrity sha512-WCxx1ixHT0GQU9hb0KI/mhgRQhnU+U3GvwY6ZvVjYq8rsihIGoaIOUbY0yMPBxLH5MDtr0kz3fisWGNcbWW7Jw==
   dependencies:
     object-assign "4.x"
-
-add@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/add/-/add-2.0.6.tgz#248f0a9f6e5a528ef2295dbeec30532130ae2235"
-  integrity sha1-JI8Kn25aUo7yKV2+7DBTITCuIjU=
 
 address@1.1.2, address@^1.0.1:
   version "1.1.2"
@@ -5878,6 +5908,11 @@ core-js@^3.5.0:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.7.0.tgz#b0a761a02488577afbf97179e4681bf49568520f"
   integrity sha512-NwS7fI5M5B85EwpWuIwJN4i/fbisQUwLwiSNUWeXlkAZ0sbBjLEvLvFLf1uzAUV66PcEPt4xCGCmOZSxVf3xzA==
 
+core-js@^3.6.5:
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.14.0.tgz#62322b98c71cc2018b027971a69419e2425c2a6c"
+  integrity sha512-3s+ed8er9ahK+zJpp9ZtuVcDoFzHNiZsPbNAAE4KXgrRHbjSqqNN6xGSXq6bq7TZIbKj4NLrLb6bJ5i+vSVjHA==
+
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
@@ -5969,6 +6004,13 @@ cross-fetch@^3.0.4:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.0.6.tgz#3a4040bc8941e653e0e9cf17f29ebcd177d3365c"
   integrity sha512-KBPUbqgFjzWlVcURG+Svp9TlhA5uliYtiNx/0r8nv0pdypeQCRJ9IaSIc3q/x3q8t3F75cHuwxVql1HFGHCNJQ==
+  dependencies:
+    node-fetch "2.6.1"
+
+cross-fetch@^3.0.5:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.1.4.tgz#9723f3a3a247bf8b89039f3a380a9244e8fa2f39"
+  integrity sha512-1eAtFWdIubi6T4XPy6ei9iUFoKpUkIF971QLN8lIvvvwueI65+Nw5haMNKUwfJxabqlIIDODJKGrQ66gxC0PbQ==
   dependencies:
     node-fetch "2.6.1"
 
@@ -7837,6 +7879,16 @@ fb-watchman@^2.0.0:
   integrity sha512-DkPJKQeY6kKwmuMretBhr7G6Vodr7bFwDYTXIkfG1gjvNpaxBTQV3PbXg6bR1c1UP4jPOX0jHUbbHANL9vRjVg==
   dependencies:
     bser "2.1.1"
+
+fhirclient@2.3.11:
+  version "2.3.11"
+  resolved "https://registry.yarnpkg.com/fhirclient/-/fhirclient-2.3.11.tgz#daff5f605007d163a74cd7cd65130f0a60cef534"
+  integrity sha512-pBEcAJlMLeqrnDEYPDTV+BGooYIzwj0vsIjR7ppFF2qSHXEijgQ6IgyKkUB3EnnR4/UP91pCicjrnM/qFGV/2Q==
+  dependencies:
+    abortcontroller-polyfill "^1.5.0"
+    core-js "^3.6.5"
+    cross-fetch "^3.0.5"
+    debug "^4.1.1"
 
 figgy-pudding@^3.4.1, figgy-pudding@^3.5.1:
   version "3.5.2"
@@ -14474,10 +14526,10 @@ react-popper@^1.3.6:
     typed-styles "^0.0.7"
     warning "^4.0.2"
 
-react-query@^3.15.1:
-  version "3.15.1"
-  resolved "https://registry.yarnpkg.com/react-query/-/react-query-3.15.1.tgz#060b32c3b6bb7d54c55aa3f2c7a494805943b62d"
-  integrity sha512-F17OuiL7CS9HDbNt1vUN5Opk0Ua+r2y2liDGLlZh3mbdc3ANob0mgaWB6TOBdlyMewbgg+qf1keS2aCV1qVWOg==
+react-query@^3.16.1:
+  version "3.16.1"
+  resolved "https://registry.yarnpkg.com/react-query/-/react-query-3.16.1.tgz#0bb9c5c45a74e14b5e204218fa602fe1a1065976"
+  integrity sha512-dof8XXSZ7HprfzvpbJE+YZrhUXcQYxy1j+NU8ZPYpKKDF79wlZAke+GyYhQ0b6SuOFp8ZpVXSpdD4AL3lxmeXQ==
   dependencies:
     "@babel/runtime" "^7.5.5"
     broadcast-channel "^3.4.1"
