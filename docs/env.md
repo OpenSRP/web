@@ -213,6 +213,7 @@ Below is a list of currently supported environment variables:
   - default: `https://fhir.labs.smartregister.org/fhir`
 
 - **REACT_APP_USER_FORM_RENDER_FIELDS** `partially-implemented`
+
   - module: `user-management`
   - configure rendered form fields in creating editing users, a comma separated list of `FormFieldsKey's`
   - **optional**
