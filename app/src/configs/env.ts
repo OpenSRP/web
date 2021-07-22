@@ -12,6 +12,7 @@ const defaultRoles = {
   LOCATIONS: Roles.ROLE_VIEW_KEYCLOAK_USERS,
   CARD_SUPPORT: Roles.ROLE_VIEW_KEYCLOAK_USERS,
   INVENTORY: Roles.ROLE_VIEW_KEYCLOAK_USERS,
+  HEALTHCARE: Roles.ROLE_VIEW_KEYCLOAK_USERS,
   TEAMS: Roles.ROLE_VIEW_KEYCLOAK_USERS,
   PRODUCT_CATALOGUE: Roles.ROLE_VIEW_KEYCLOAK_USERS,
   FORM_CONFIGURATION: Roles.ROLE_VIEW_KEYCLOAK_USERS,
@@ -30,6 +31,9 @@ export const ENABLE_PLANS = setEnv('REACT_APP_ENABLE_PLANS', 'false') === 'true'
 
 /** Activate the teams menu */
 export const ENABLE_TEAMS = setEnv('REACT_APP_ENABLE_TEAMS', 'false') === 'true';
+
+/** Activate the teams menu */
+export const ENABLE_HEALTHCARE = setEnv('REACT_APP_ENABLE_FHIR_HEALTHCARE', 'false') === 'true';
 
 /** Activate the plans menu */
 export const ENABLE_LOCATIONS = setEnv('REACT_APP_ENABLE_LOCATIONS', 'false') === 'true';
@@ -62,15 +66,19 @@ export const DATE_FORMAT = setEnv('REACT_APP_DATE_FORMAT', 'yyyy-MM-DD');
 
 export const DEFAULT_TIME = setEnv('REACT_APP_DEFAULT_TIME', 'T00:00:00+00:00');
 
-export const DEFAULT_PLAN_DURATION_DAYS = Number(
-  setEnv('REACT_APP_DEFAULT_PLAN_DURATION_DAYS', 20)
-);
+export const DEFAULT_PLAN_DURATION_DAYS = setEnv('REACT_APP_DEFAULT_PLAN_DURATION_DAYS', 20);
+
+/** Activate teams menu */
+export const ENABLE_FHIR_TEAMS_MODULE = setEnv('REACT_APP_ENABLE_FHIR_TEAMS', 'false') === 'true';
 
 /** Default plan id */
 export const DEFAULT_PLAN_ID = setEnv(
   'REACT_APP_DEFAULT_PLAN_ID',
   '27362060-0309-411a-910c-64f55ede3758'
 );
+
+/** Activate patients menu */
+export const ENABLE_PATIENTS_MODULE = setEnv('REACT_APP_ENABLE_FHIR_PATIENTS', 'false') === 'true';
 
 export const BACKEND_ACTIVE = setEnv('REACT_APP_BACKEND_ACTIVE', 'false') === 'true';
 
@@ -142,6 +150,9 @@ export const DISABLE_LOGIN_PROTECTION =
 export const ENABLE_PRODUCT_CATALOGUE =
   setEnv('REACT_APP_ENABLE_PRODUCT_CATALOGUE', 'false') === 'true';
 
+/** Activate the FHIR Care Team menu */
+export const ENABLE_FHIR_CARE_TEAM = setEnv('REACT_APP_ENABLE_FHIR_CARE_TEAM', 'false') === 'true';
+
 /** Activate form configuration */
 export const ENABLE_FORM_CONFIGURATION =
   setEnv('REACT_APP_ENABLE_FORM_CONFIGURATION', 'false') === 'true';
@@ -163,13 +174,15 @@ export const FILTER_BY_PARENT_ID = setEnv('REACT_APP_FILTER_BY_PARENT_ID', 'fals
 
 export const DEFAULT_HOME_MODE = setEnv('REACT_APP_DEFAULT_HOME_MODE', 'default');
 
-export const ENABLE_TEAMS_ASSIGNMENT_MODULE =
-  setEnv('REACT_APP_ENABLE_TEAMS_ASSIGNMENT_MODULE', 'false') === 'true';
+export const ENABLE_FHIR = setEnv('REACT_APP_ENABLE_FHIR', 'false') === 'true';
 
 export const FHIR_API_BASE_URL = setEnv(
   'REACT_APP_FHIR_API_BASE_URL',
   'https://fhir.labs.smartregister.org/fhir'
 );
+
+export const ENABLE_TEAMS_ASSIGNMENT_MODULE =
+  setEnv('REACT_APP_ENABLE_TEAMS_ASSIGNMENT_MODULE', 'false') === 'true';
 
 export const KEYCLOAK_USERS_PAGE_SIZE = Number(setEnv('REACT_APP_KEYCLOAK_USERS_PAGE_SIZE', 20));
 

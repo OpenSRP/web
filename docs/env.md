@@ -188,6 +188,18 @@ Below is a list of currently supported environment variables:
   - **not required**_(`string`)_
   - _accepted values_: _default | eusm | tunisia_
 
+- **REACT_APP_FHIR_API_BASE_URL**
+
+  - FHIR server base URL
+  - **Required**
+  - default: `https://fhir.labs.smartregister.org/fhir`
+
+- **REACT_APP_ENABLE_FHIR**
+
+  - Enables modules that fetch resources from FHIR server
+  - **Optional**(`boolean`)
+  - default: `"false"`
+
 - **REACT_APP_OPENSRP_OAUTH_SCOPES**
 
   - Sets the oauth app permission scopes.
@@ -213,14 +225,22 @@ Below is a list of currently supported environment variables:
   - default: `https://fhir.labs.smartregister.org/fhir`
 
 - **REACT_APP_USER_FORM_RENDER_FIELDS** `partially-implemented`
+
   - module: `user-management`
   - configure rendered form fields in creating editing users, a comma separated list of `FormFieldsKey's`
   - **optional**
   - default: `''`
 
 - **REACT_APP_USER_FORM_HIDDEN_FIELDS** `partially-implemented`
+
   - module: `user-management`
   - configure hidden form fields in creating editing users, a comma separated list of `FormFieldsKey's`.
   - hidden form fields need to be first rendered in `REACT_APP_USER_FORM_RENDER_FIELDS`
   - **optional**
   - default: `''`
+
+- **REACT_APP_ENABLE_FHIR_CARE_TEAM**
+
+  - Enables the FHIR Care Team module
+  - **Optional**(`boolean`)
+  - default: `"false"`

@@ -18,9 +18,12 @@ import {
   ENABLE_PRODUCT_CATALOGUE,
   ENABLE_TEAMS,
   ENABLE_TEAMS_ASSIGNMENT_MODULE,
+  ENABLE_HEALTHCARE,
   ENABLE_FORM_CONFIGURATION,
   ENABLE_CARD_SUPPORT,
   OPENSRP_ROLES,
+  ENABLE_PATIENTS_MODULE,
+  ENABLE_FHIR_CARE_TEAM,
 } from './configs/env';
 
 import {
@@ -28,6 +31,7 @@ import {
   URL_LOCATION_UNIT,
   URL_LOCATION_UNIT_GROUP,
   URL_TEAMS,
+  URL_HEALTHCARE,
   URL_MANIFEST_RELEASE_LIST,
   URL_DRAFT_FILE_LIST,
   URL_TEAM_ASSIGNMENT,
@@ -35,6 +39,7 @@ import {
   URL_DOWNLOAD_CLIENT_DATA,
   URL_USER_GROUPS,
   URL_USER_ROLES,
+  URL_FHIR_CARE_TEAM,
 } from './constants';
 import lang, { TFunction } from './lang';
 
@@ -160,6 +165,12 @@ export function getRoutes(roles: string[], t: TFunction): Route[] {
           url: CATALOGUE_LIST_VIEW_URL,
         },
         {
+          title: langObj.CARE_TEAM,
+          key: 'fhir-care-team',
+          enabled: ENABLE_FHIR_CARE_TEAM,
+          url: URL_FHIR_CARE_TEAM,
+        },
+        {
           title: langObj.TEAMS,
           key: 'teams',
           enabled:
@@ -176,6 +187,12 @@ export function getRoutes(roles: string[], t: TFunction): Route[] {
               enabled: ENABLE_TEAMS_ASSIGNMENT_MODULE,
             },
           ],
+        },
+        {
+          title: langObj.HEALTHCARE,
+          key: 'healthcare',
+          url: URL_HEALTHCARE,
+          enabled: ENABLE_HEALTHCARE,
         },
         {
           title: langObj.FORM_CONFIGURATION,
@@ -200,6 +217,13 @@ export function getRoutes(roles: string[], t: TFunction): Route[] {
           ],
         },
       ],
+    },
+    {
+      otherProps: { icon: <IdcardOutlined /> },
+      title: langObj.PATIENTS,
+      key: 'fhir-patients',
+      enabled: ENABLE_PATIENTS_MODULE,
+      url: '/admin/patients',
     },
   ];
 

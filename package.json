@@ -45,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "fhirclient": "2.3.11",
     "@babel/cli": "^7.11.6",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
@@ -59,6 +60,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.0.4",
     "@testing-library/user-event": "^7.1.2",
+    "@testing-library/react-hooks": "^7.0.0",
     "@types/bootstrap": "^4.5.0",
     "@types/enzyme": "^3.10.3",
     "@types/enzyme-adapter-react-16": "^1.0.5",
@@ -98,6 +100,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-sonarjs": "^0.5.0",
+    "fhirclient": "2.3.11",
     "flush-promises": "^1.0.2",
     "husky": "^4.2.5",
     "i18next": "^19.8.4",

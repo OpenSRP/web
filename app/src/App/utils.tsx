@@ -23,6 +23,7 @@ import {
   DEFAULT_PLAN_ID,
   FILTER_BY_PARENT_ID,
   KEYCLOAK_USERS_PAGE_SIZE,
+  FHIR_API_BASE_URL,
   DISABLE_TEAM_MEMBER_REASSIGNMENT,
   USER_FORM_HIDDEN_FIELDS,
   USER_FORM_RENDER_FIELDS,
@@ -31,6 +32,7 @@ import {
 
 export const BaseProps = {
   baseURL: OPENSRP_API_BASE_URL,
+  fhirbaseURL: FHIR_API_BASE_URL,
 };
 
 export const teamAssignmentProps = {
@@ -154,4 +156,8 @@ export const createEditUserProps = {
   // that is closer to the code.
   userFormHiddenFields: USER_FORM_HIDDEN_FIELDS,
   userFormRenderFields: USER_FORM_RENDER_FIELDS,
+};
+
+export const heatlhcareProps = {
+  fhirBaseURL: FHIR_API_BASE_URL,
 };
